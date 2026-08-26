@@ -117,6 +117,8 @@ export async function onRequest(context) {
   headers.set('Vary', 'Origin')
   finalResponse = new Response(finalResponse.body, { status: finalResponse.status, headers })
 
+  // Do not make the visitor wait for the cache write. The response can be
+  // returned immediately while Cloudflare stores it for the next request.
   context.waitUntil(cache.put(cacheRequest, finalResponse.clone()))
   return finalResponse
 }
