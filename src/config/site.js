@@ -1,13 +1,15 @@
 const site = {
+  // Central site identity. Change these values here instead of editing views.
   name: '91XS',
-  url: 'https://10mac.pages.dev',
+  url: 'https://91xs-8ri.pages.dev',
   title: '91XS',
   description: '91XS 视频、福利图片与精彩小说',
   titleTemplate: '%s - 91XS',
 
+  // Same-origin Pages Functions endpoints. The browser must never call lbapi9.com directly.
   api: {
-    vod: 'https://www.hlzy.store',
-    article: 'https://www.hlzy.store',
+    vod: '/api/vod',
+    article: '/api/art',
   },
 
   pages: {
