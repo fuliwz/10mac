@@ -35,6 +35,7 @@ function loadHistory() {
 
 function clearHistory() {
   localStorage.removeItem(STORAGE_KEY)
+  // Remove the legacy key too so stale data cannot reappear in older builds.
   localStorage.removeItem('history')
   items.value = []
 }
