@@ -5,9 +5,10 @@ const site = {
   description: '91XS 视频、福利图片与精彩小说',
   titleTemplate: '%s - 91XS',
 
+  // Browser uses same-origin Pages Functions. The Function proxies to hlzy.store.
   api: {
-    vod: 'https://www.hlzy.store/api.php/provide/vod/',
-    article: 'https://www.hlzy.store/api.php/provide/art/',
+    vod: '/api/vod',
+    article: '/api/art',
   },
 
   pages: {
