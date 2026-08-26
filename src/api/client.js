@@ -2,7 +2,7 @@ import axios from 'axios'
 import site from '../config/site'
 
 // Browser requests must always stay same-origin. Do not allow a production
-environment variable to turn this into a direct cross-origin API request.
+// environment variable to turn this into a direct cross-origin API request.
 export const API_BASE = site.api.vod
 export const ART_API_BASE = site.api.article
 
