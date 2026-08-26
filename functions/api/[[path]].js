@@ -36,8 +36,8 @@ export async function onRequest(context) {
   if (params.has('ids') && !/^[\w,-]+$/.test(params.get('ids'))) return new Response('Invalid ids', { status: 400, headers: corsHeaders })
 
   const upstreamBase = isArticle
-    ? 'https://lbapi9.com/api.php/provide/art/'
-    : 'https://lbapi9.com/api.php/provide/vod/'
+    ? 'https://www.hlzy.store/api.php/provide/art/'
+    : 'https://www.hlzy.store/api.php/provide/vod/'
 
   const sorted = [...params.entries()].sort(([a], [b]) => a.localeCompare(b))
   const normalized = new URLSearchParams(sorted).toString()
